@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pihole Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/style.css"> 
+</head>
+
+<body>
+    <div class="container">
+        <div class="toggle-container">
+            <button class="theme-toggle" id="theme-toggle">
+                <span id="toggle-text">Dark Mode</span>
+            </button>
+        </div>
+
+        <h1>Pihole Manager</h1>
+
+        <section class="card">
+            <table id="table" class="client-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Client</th>
+                        <th style="width: 40%;">Description</th>
+                        <th style="width: 35%;">AdBlock Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>

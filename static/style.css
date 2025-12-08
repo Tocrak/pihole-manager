@@ -1,0 +1,160 @@
+:root {
+    --bg: #ffffff;
+    --fg: #111111;
+    --card-bg: #f4f4f4;
+    --border: #cccccc;
+    --color-primary: #007bff;
+    --color-success: #28a745;
+    --color-danger: #dc3545;
+    --color-text-light: #6c757d;
+    --color-button-bg: #e0e0e0;
+    --color-button-hover: #d0d0d0;
+}
+
+[data-theme="dark"] {
+    --bg: #121212;
+    --fg: #eaeaea;
+    --card-bg: #1e1e1e;
+    --border: #333333;
+    --color-primary: #66b2ff;
+    --color-success: #4cd964;
+    --color-danger: #ff453a;
+    --color-text-light: #aaaaaa;
+    --color-button-bg: #3c3c3e;
+    --color-button-hover: #4e4e50;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: system-ui, sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.25rem;
+    position: relative; 
+}
+
+h1 {
+    margin-top: 0.5rem;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+}
+
+.toggle-container {
+    position: absolute; 
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 10;
+    transform: translateY(10px); 
+}
+
+.theme-toggle {
+    background: var(--color-button-bg);
+    border: 1px solid var(--border);
+    color: var(--fg);
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+    font-family: inherit;
+}
+
+.theme-toggle:hover {
+    background: var(--color-button-hover);
+}
+
+/* --- Table Styling --- */
+.client-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.client-table th,
+.client-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    color: var(--fg);
+}
+
+.client-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+.client-table tbody tr:hover {
+    background-color: var(--color-button-hover); 
+}
+
+.client-table td:nth-child(1),
+.client-table td:nth-child(2) {
+    text-align: center;
+}
+
+
+.status-button {
+    border: none;
+    border-radius: 0.3rem;
+    padding: 8px 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-width: 120px;
+    justify-content: center;
+    font-family: inherit;
+}
+
+.status-button:hover {
+    opacity: 0.9;
+}
+
+.status-button.enabled {
+    background-color: var(--color-success);
+    color: var(--bg); 
+}
+
+.status-button.disabled {
+    background-color: var(--color-danger);
+    color: var(--bg);
+}
+
+.status-button.unknown {
+    background-color: #ffc107; 
+    color: var(--fg);
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.icon {
+    font-style: normal;
+}
