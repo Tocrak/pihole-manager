@@ -21,8 +21,8 @@ The application requires the following environment variables to connect and mana
 | :--- | :--- | :--- |
 | `ENDPOINTS` | Comma-separated list of full Pi-hole admin base URLs. | `http://pihole1/,http://pihole2/` |
 | `PIHOLE_PASS` | The password for the Pi-hole Web Admin interface. | `MySecretPass` |
-| `ADBLOCK_GROUP_ID` | The Pi-hole Group ID for **Ad-Blocking Enabled** clients. | `1` (Default) |
-| `NON_ADBLOCK_GROUP_ID` | The Pi-hole Group ID for **Ad-Blocking Disabled** clients. | `0` (Default) |
+| `ADBLOCK_GROUP_ID` | The Pi-hole Group ID for **Ad-Blocking Enabled** clients. | `0` (Default) |
+| `NON_ADBLOCK_GROUP_ID` | The Pi-hole Group ID for **Ad-Blocking Disabled** clients. | `1` (Default) |
 
 ---
 

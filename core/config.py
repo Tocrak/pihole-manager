@@ -17,15 +17,15 @@ if not PIHOLE_PASS:
     logger.error("No PIHOLE_PASS env variable set.")
 
 try:
-    ADBLOCK_GROUP_ID = int(os.environ.get('ADBLOCK_GROUP_ID', 1))
+    ADBLOCK_GROUP_ID = int(os.environ.get('ADBLOCK_GROUP_ID'))
 except ValueError:
-    logger.error("ADBLOCK_GROUP_ID is not an integer. Defaulting to 0.")
+    logger.warn("ADBLOCK_GROUP_ID is not an integer. Defaulting to 0.")
     ADBLOCK_GROUP_ID = 0
 
 try:
-    NON_ADBLOCK_GROUP_ID = int(os.environ.get('NON_ADBLOCK_GROUP_ID', 1))
+    NON_ADBLOCK_GROUP_ID = int(os.environ.get('NON_ADBLOCK_GROUP_ID'))
 except ValueError:
-    logger.error("NON_ADBLOCK_GROUP_ID is not an integer. Defaulting to 1.")
+    logger.warn("NON_ADBLOCK_GROUP_ID is not an integer. Defaulting to 1.")
     NON_ADBLOCK_GROUP_ID = 1
 
 logger.info(f"Ad-Block Group ID set to {ADBLOCK_GROUP_ID}")
