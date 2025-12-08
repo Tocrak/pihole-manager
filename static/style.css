@@ -36,14 +36,12 @@ body {
     max-width: 900px;
     margin: 0 auto;
     padding: 1.25rem;
-    position: relative; 
+    position: relative;
 }
 
 h1 {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem; 
-    font-size: 2.5rem;
-    display: inline-block; 
+    margin-top: 0;
+    margin-bottom: 0.9rem;
 }
 
 .card {
@@ -52,15 +50,15 @@ h1 {
     border-radius: 0.5rem;
     border: 1px solid var(--border);
     margin-bottom: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .toggle-container {
-    position: absolute; 
+    position: absolute;
     top: 1.25rem;
     right: 1.25rem;
     z-index: 10;
-    transform: translateY(10px); 
+    transform: translateY(10px);
 }
 
 .theme-toggle {
@@ -105,7 +103,7 @@ h1 {
 }
 
 .client-table tbody tr:hover {
-    background-color: var(--color-button-hover); 
+    background-color: var(--color-button-hover);
 }
 
 .client-table td:nth-child(1),
@@ -135,7 +133,7 @@ h1 {
 
 .status-button.enabled {
     background-color: var(--color-success);
-    color: var(--bg); 
+    color: var(--bg);
 }
 
 .status-button.disabled {
@@ -144,7 +142,7 @@ h1 {
 }
 
 .status-button.unknown {
-    background-color: #ffc107; 
+    background-color: #ffc107;
     color: var(--fg);
 }
 
